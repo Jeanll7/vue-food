@@ -1,7 +1,20 @@
 <template>
+  <Banner />
   <div class="main-container">
-    <h1>Home</h1>
+    <h1>Monte o seu burger:</h1>
+    <p>formulário</p>
   </div>
 </template>
 
-<script></script>
+<script>
+import Banner from "../components/Banner";
+
+export default {
+  name: "Home",
+  components: {
+    Banner,
+  },
+};
+</script>
+
+// 3:19 #23
