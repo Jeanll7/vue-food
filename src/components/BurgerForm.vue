@@ -20,6 +20,28 @@
             <option value="integral">Integral</option>
           </select>
         </div>
+        <div class="input-container">
+          <label for="carne">Escolha o tipo de carne do seu Burger:</label>
+          <select name="carne" id="carne" v-model="carne">
+            <option value="">Selecione o tipo de carne</option>
+            <option value="maminha">Maminha</option>
+          </select>
+        </div>
+        <div class="input-container">
+          <label for="opcionais">Selecione os opcionais:</label>
+          <div class="checkbox-container">
+            <input
+              type="checkbox"
+              name="opcionais"
+              v-model="opcionais"
+              value="salame"
+            />
+            <span>Salame</span>
+          </div>
+        </div>
+        <div class="input-container">
+          <input type="submit" class="submit-btn" value="Criar meu Burger!" />
+        </div>
       </form>
     </div>
   </div>
