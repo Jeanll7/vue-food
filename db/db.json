@@ -92,6 +92,36 @@
       ],
       "status": "Solicitado",
       "id": 1
+    },
+    {
+      "nome": null,
+      "carne": "Maminha",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Bacon",
+        "Cebola roxa"
+      ],
+      "status": "Solicitado",
+      "id": 2
+    },
+    {
+      "nome": "Zeca",
+      "carne": "Maminha",
+      "pao": "Italiano Branco",
+      "opcionais": [],
+      "status": "Solicitado",
+      "id": 3
+    },
+    {
+      "nome": "zeca",
+      "carne": "Maminha",
+      "pao": "Italiano Branco",
+      "opcionais": [
+        "Bacon",
+        "Salame"
+      ],
+      "status": "Solicitado",
+      "id": 4
     }
   ]
 }
