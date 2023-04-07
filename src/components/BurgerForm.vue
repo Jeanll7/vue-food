@@ -1,6 +1,7 @@
 <template>
   <div>
-    <p>Componente de mensagem</p>
+    <!-- <p>Componente de mensagem</p> -->
+    <Message :msg="msg" v-show="msg" />
     <div>
       <form id="burger-form" @submit="createBurger">
         <div class="input-container">
@@ -58,6 +59,8 @@
 </template>
 
 <script>
+import Message from "./Message";
+
 export default {
   name: "BurgerForm",
   data() {
@@ -102,6 +105,11 @@ export default {
       const res = await req.json();
 
       // colocar uma msg de sitema
+      this.msg = `Pedido Nº ${res.id} realizado com sucesso`;
+
+      // limpar msg
+      setTimeout(() => (this.msg = ""), 3000);
+
       // limpar os campos
       this.nome = "";
       this.carne = "";
@@ -111,6 +119,9 @@ export default {
   },
   mounted() {
     this.getIngredientes();
+  },
+  components: {
+    Message,
   },
 };
 </script>
