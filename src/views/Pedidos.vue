@@ -14,3 +14,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+#footer {
+  bottom: 0;
+}
+</style>

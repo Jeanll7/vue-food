@@ -1,25 +1,4 @@
 <template>
-  <!-- <table id="burger-table">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Cliente</th>
-        <th>Pão</th>
-        <th>Carne</th>
-        <th>Opcionais</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="(item, index) in items" :key="index">
-        <td class="order-id">{{ item.id }}</td>
-        <td>{{ item.cliente }}</td>
-        <td>{{ item.pao }}</td>
-        <td>{{ item.carne }}</td>
-        <td>{{ item.opcionais }}</td>
-      </tr>
-    </tbody>
-  </table> -->
-
   <div id="burger-table">
     <div>
       <div id="burger-table-heading">
@@ -34,33 +13,16 @@
   </div>
 
   <div id="burger-table-rows">
-    <div class="burger-table-row">
-      <div class="order-number">1</div>
-      <div>João</div>
-      <div>Pao xis</div>
-      <div>Carne</div>
+    <div class="burger-table-row" v-for="burger in burgers" :key="burger.id">
+      <div class="order-number">{{ burger.id }}</div>
+      <div>{{ burger.nome }}</div>
+      <div>{{ burger.pao }}</div>
+      <div>{{ burger.carne }}</div>
       <div>
         <ul>
-          <li>Salame</li>
-          <li>Tomate</li>
-        </ul>
-      </div>
-      <div>
-        <select name="status" class="status">
-          <option value="">Selecione</option>
-        </select>
-        <button class="delete-btn">Cancelar</button>
-      </div>
-    </div>
-    <div class="burger-table-row">
-      <div class="order-number">1</div>
-      <div>João</div>
-      <div>Pao xis</div>
-      <div>Carne</div>
-      <div>
-        <ul>
-          <li>Salame</li>
-          <li>Tomate</li>
+          <li v-for="(opcional, index) in burger.opcionais" :key="index">
+            {{ opcional }}
+          </li>
         </ul>
       </div>
       <div>
@@ -76,6 +38,27 @@
 <script>
 export default {
   name: "Dashboard",
+  data() {
+    return {
+      burgers: null,
+      burger_id: null,
+      status: [],
+    };
+  },
+  methods: {
+    async getPedidos() {
+      const req = await fetch("http://localhost:3000/burgers");
+
+      const data = await req.json();
+
+      this.burgers = data;
+
+      // resgatar os status
+    },
+  },
+  mounted() {
+    this.getPedidos();
+  },
 };
 </script>
 
