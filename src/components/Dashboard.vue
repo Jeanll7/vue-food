@@ -54,6 +54,14 @@ export default {
       this.burgers = data;
 
       // resgatar os status
+      this.getStatus();
+    },
+    async getStatus() {
+      const req = await fetch("http://localhost:3000/status");
+
+      const data = await req.json();
+
+      this.status = data;
     },
   },
   mounted() {

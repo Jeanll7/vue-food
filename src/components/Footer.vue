@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <footer id="footer">
     <p>Make Your Burger &copy; 2023</p>
   </footer>
@@ -22,4 +22,4 @@ export default {
   width: 100%;
   bottom: 0;
 }
-</style>
+</style> -->
