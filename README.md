@@ -18,7 +18,7 @@ yarn serve
 yarn build
 ```
 
-### Backend configuration
+### json-server configuration
 
 ```
 npm i json-server
