@@ -18,6 +18,8 @@ yarn serve
 yarn build
 ```
 
-### Customize configuration
+### Backend configuration
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+npm i json-server
+```

@@ -94,27 +94,15 @@
       "id": 1
     },
     {
-      "nome": "João",
-      "carne": "Maminha",
-      "pao": "3 Queijos",
+      "nome": "Maria",
+      "carne": "Veggie burger",
+      "pao": "Pão 7 Grãos",
       "opcionais": [
-        "Bacon",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado",
-      "id": 2
-    },
-    {
-      "nome": "Pedro",
-      "carne": "Picanha",
-      "pao": "Parmesão e Orégano",
-      "opcionais": [
-        "Cheddar",
         "Tomate",
         "Pepino"
       ],
       "status": "Solicitado",
-      "id": 3
+      "id": 4
     }
   ]
 }
