@@ -94,15 +94,15 @@
       "id": 1
     },
     {
-      "nome": "Maria",
-      "carne": "Veggie burger",
-      "pao": "Pão 7 Grãos",
+      "nome": "Jorge",
+      "carne": "Alcatra",
+      "pao": "Parmesão e Orégano",
       "opcionais": [
-        "Tomate",
-        "Pepino"
+        "Bacon",
+        "Cheddar"
       ],
-      "status": "Solicitado",
-      "id": 4
+      "status": "Finalizado",
+      "id": 2
     }
   ]
 }
